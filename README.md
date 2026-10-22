@@ -1,52 +1,123 @@
-# PhonePe Transaction Analysis Using SQL
+# 📱 PhonePe Transaction Analysis Using SQL
 
-## Project Overview
-An SQL-based data analysis project exploring digital payment transactions and user behavior using MySQL.
+### 📊 Exploring Digital Payments, Transaction Performance & User Behavior
 
-## Business Objectives
-- Measure transaction volume and transaction value.
-- Evaluate payment success and failure rates.
-- Analyze average transaction value.
-- Track monthly transaction growth.
-- Understand user activity and age distribution.
-- Identify the top five users by transaction value.
+## 📌 Project Overview
 
-## Dataset
-The project uses two tables:
+This project focuses on analyzing digital payment transactions and user behavior using **MySQL**. The goal is to evaluate transaction performance, identify payment trends, and derive meaningful business insights using SQL queries.
 
-- **transaction_data:** Transaction ID, amount, user ID, service, service type, payment status, failure reason, and transaction date.
-- **user_data:** User ID, name, age, and join date.
+## 🎯 Business Objectives
 
-## SQL Skills Demonstrated
-- Aggregate functions: `SUM()`, `COUNT()`, `AVG()`
-- Filtering and grouping: `WHERE`, `GROUP BY`
-- Joining tables using `JOIN`
-- Common Table Expressions (CTEs)
-- Subqueries and conditional aggregation
-- Date conversion and formatting
-- Window functions using `LAG()`
-- Percentage calculations and ranking
+- 💰 Measure total transaction value and successful transaction value.
+- ✅ Evaluate transaction success rate.
+- ❌ Analyze failed transactions and failure rate.
+- 📈 Track month-over-month transaction growth.
+- 🧮 Calculate Average Transaction Value (ATV).
+- 👥 Identify active transacting users.
+- 🗓️ Analyze monthly user acquisition.
+- 🎂 Understand user age distribution.
+- 🏆 Identify the top 5 users by transaction value.
 
-## Key Analyses
-1. Total successful transaction value
-2. Total recorded transaction value
-3. Total transacting users
-4. Total transactions
-5. Transaction success rate
-6. Average transaction value
-7. Active transacting users
-8. Failed transaction count and failure rate
-9. New users by month
-10. User age distribution
-11. Month-over-month transaction growth
-12. Top five users by transaction value
+## 🗂️ Dataset Description
 
-## Tools
-- MySQL
-- GitHub
+The project uses two relational tables:
 
-## Key Findings
-*To be added after validating query results and interpreting the data.*
+### 1. 💳 `transaction_data`
 
-## Disclaimer
-This is an independent portfolio project based on the dataset used for analysis. The findings should not be interpreted as official PhonePe business performance.
+Contains transaction-level information.
+
+- `Transaction_ID` — Unique transaction identifier
+- `Amount` — Transaction amount
+- `User_ID` — User associated with the transaction
+- `Service` — Service used
+- `Service_Type` — Type of service
+- `Payment_Status` — Transaction status
+- `Reason` — Reason associated with the transaction
+- `Date` — Transaction date
+
+### 2. 👤 `user_data`
+
+Contains user-level information.
+
+- `User_ID` — User identifier
+- `Name` — User name
+- `Age` — User age
+- `Join_Date` — Date the user joined
+
+## 🛠️ Tools & Technologies
+
+- 🐬 **MySQL** — Querying and analyzing data
+- 🐙 **GitHub** — Version control and project documentation
+
+## 🧠 SQL Concepts Demonstrated
+
+- 🔢 Aggregate functions: `SUM()`, `COUNT()`, `AVG()`
+- 🔍 Filtering with `WHERE`
+- 📦 Grouping with `GROUP BY`
+- 🔗 Joining tables with `JOIN`
+- 🧩 Common Table Expressions (CTEs)
+- 🔎 Subqueries and conditional aggregation
+- 📅 Date conversion and formatting
+- 🪟 Window functions using `LAG()`
+- 📐 Percentage calculations
+- 🏅 Sorting and ranking using `ORDER BY` and `LIMIT`
+- 🛡️ Handling division by zero using `NULLIF()`
+
+## 📊 Key Analyses & KPIs
+
+| # | Analysis | Business Purpose |
+|---|---|---|
+| 1 | 💰 Successful Transaction Value | Measure completed transaction value |
+| 2 | 💳 Total Transaction Value | Measure recorded transaction value |
+| 3 | 👥 Total Transacting Users | Understand user reach |
+| 4 | 🔢 Total Transactions | Measure transaction volume |
+| 5 | ✅ Transaction Success Rate | Evaluate payment performance |
+| 6 | 🧮 Average Transaction Value | Understand average successful payment size |
+| 7 | 🟢 Active Transacting Users | Measure users with successful transactions |
+| 8 | ❌ Failed Transaction Count & Rate | Evaluate payment failures |
+| 9 | 🗓️ New Users by Month | Track user acquisition |
+| 10 | 🎂 User Age Distribution | Understand user demographics |
+| 11 | 📈 Monthly Transaction Growth | Track month-over-month volume changes |
+| 12 | 🏆 Top 5 Users by Transaction Value | Identify high-value users |
+
+## 🔍 Key Findings
+
+*Insights will be added after validating the query results and analyzing the dataset.*
+
+## 📁 Project Structure
+
+```text
+phonepe-transaction-analysis-sql/
+│
+├── README.md
+└── sql/
+    └── phonepe_analysis.sql
+```
+
+## 🚀 How to Use This Project
+
+1. Install or open MySQL.
+2. Load the dataset into the required tables.
+3. Review the SQL scripts in the `sql/` directory.
+4. Execute the queries in MySQL.
+5. Review the results and interpret the business insights.
+
+## ⚠️ Data & Methodology Notes
+
+- Transaction value and transaction revenue are not necessarily the same. This project measures transaction amounts, not PhonePe's actual revenue or commission.
+- Total recorded transaction value includes all payment statuses unless otherwise specified.
+- Successful transaction value and Average Transaction Value are calculated using successful transactions only.
+- Monthly transaction growth measures changes in transaction count, not transaction amount.
+- Results depend on the accuracy and completeness of the supplied dataset.
+
+## 👨‍💻 Author
+
+**Abhishek Verma**
+
+Aspiring Data Analyst | SQL | Excel | Power BI
+
+## ⭐ Project Note
+
+This is an independent portfolio project created for SQL practice and data analysis. It does not represent official PhonePe business performance.
+
+If you find this project useful, feel free to explore the SQL scripts and analysis!
